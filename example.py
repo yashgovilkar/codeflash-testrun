@@ -14,11 +14,8 @@ def slow_function():
     return primes
 
 def redundant_loop():
-    data = [x**2 for x in range(10000)]
-    total = 0
-    for num in data:
-        total += num
-    average = total / len(data)
+    total = sum(x**2 for x in range(10000))
+    average = total / 10000
     return average
 
 def main():
